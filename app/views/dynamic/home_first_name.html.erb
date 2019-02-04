@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
+   <link rel="stylesheet" type="text/css" href="style.css" />
+   <title> <%= params[:first_name] %> </title>
+ </head>
+ <body>
+    <h2>Welcome <%= params[:first_name] %></h2>
+    <p> Voici la liste des potins:</p>
+    <% @array_gossip.each do |i| %>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><b>Auteur du gossip: </b><%= i.user.first_name %></h5>
+        <h5 class="card-text"><b>Titre du gossip:</b> <%= i.title %></h5>
+        <a style="color: #ff00ff" href="../potin/<%=i.id%>" class="card-link">En savoir plus...</a>
+      </div>
+    </div>
+    <%end%>
+ </body>
+</html>
+
