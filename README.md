@@ -23,12 +23,6 @@
 - Charles
 
 
-
-#liens utilisé
-le template boots-strap utilisé
-https://startbootstrap.com/template-overviews/heroic-features/
-
-
 ## Détails
 
 Notre application est composé de 6 modèles:
