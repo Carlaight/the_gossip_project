@@ -1,17 +1,23 @@
-<!DOCTYPE html>
+
 <html>
  <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-   <link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
-   <link rel="stylesheet" type="text/css" href="style.css" />
    <title> Bienvenue </title>
  </head>
  <body>
- 
-    
-    # afficher gossip all
-
-
+    <h2>Bienvenue</h2>
+        <%= @gossips.each do |i| %>
+    <div class="card">
+    <div class="card-header">
+    <p>potin n°<%= i.id %></p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= i.user.first_name %></h5>
+      <p class="card-text"><%= i.title %></p>
+      <a href= "gossip/<%= i.id%>" class="btn btn-primary">En savoir plus...</a>
+    </div>
+    </div>
+    <% end %>
  </body>
 </html>
 

@@ -4,5 +4,7 @@ class User < ApplicationRecord
   has_many :gossips
   has_many :tags
   has_many :sent_messages, foreign_key: 'sender_id', class_name: "PrivateMessage"
-  has_many :received_messages, foreign_key: 'recipient_id', class_name: "PrivateMessage"  
+  has_many :received_messages, foreign_key: 'recipient_id', class_name: "PrivateMessage"
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end

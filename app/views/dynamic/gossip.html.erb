@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title> Gossip </title>
+ </head>
+ <body>
+    <h2>Gossip n°<%= @gossip.id %></h2>
+  <p>
+    <h2><%= @gossip.title %></h2><br>
+    <h4>Contenu :</h4><br>
+    <%= @gossip.content %><br>
+
+    <a href = "user/<%=@user.id %>" class="btn btn-primary">Voir l'auteur</a><br>
+  </p>
+ </body>
+</html>
+

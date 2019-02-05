@@ -10,6 +10,7 @@ gem 'pry'
 gem 'pg'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'faker'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

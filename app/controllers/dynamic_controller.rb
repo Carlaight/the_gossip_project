@@ -1,32 +1,19 @@
 class DynamicController < ApplicationController
-  
+  attr_accessor :gossip, :gossips, :user
   def home
     puts "$" * 20
     puts "I AM IN DA DYNAMIC#HOME"
     puts "$" * 20
-
-    @gossip = Gossip.all
-    #puts @gossip
-
-
-	end
+    @gossips = Gossip.all
+  end
   
-  def show_all
-    puts "$" * 20
-    puts "Voici le message de l'URL :" 
-    puts params[:first_name]
-    puts "$" * 20
-    @first_name = params[:first_name]
-    @author = User.first.first_name
-    @title = Gossip.first.title
-    @array_gossip = Gossip.all
+  def gossip
+    @gossip = Gossip.find_by(id: params[:i])
+    @user = User.find_by(id: @gossip.user)
   end
 
-  def show_one
+  def user
+    @gossip = Gossip.find_by(id: params[:i])
+    @user = User.find_by(id: @gossip.user)
   end
-
-
-
-
-
 end
